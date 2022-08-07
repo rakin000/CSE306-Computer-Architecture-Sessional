@@ -58,7 +58,6 @@
     <wire from="(520,440)" to="(520,450)"/>
     <wire from="(780,230)" to="(780,430)"/>
     <wire from="(920,440)" to="(920,450)"/>
-    <wire from="(830,910)" to="(830,920)"/>
     <wire from="(830,340)" to="(890,340)"/>
     <wire from="(860,450)" to="(920,450)"/>
     <wire from="(440,440)" to="(440,450)"/>
@@ -101,7 +100,6 @@
     <wire from="(820,420)" to="(820,530)"/>
     <wire from="(550,230)" to="(570,230)"/>
     <wire from="(1060,20)" to="(1060,650)"/>
-    <wire from="(830,890)" to="(920,890)"/>
     <wire from="(470,230)" to="(490,230)"/>
     <wire from="(880,540)" to="(1020,540)"/>
     <wire from="(900,430)" to="(910,430)"/>
@@ -118,12 +116,10 @@
     <wire from="(610,10)" to="(690,10)"/>
     <wire from="(680,420)" to="(690,420)"/>
     <wire from="(770,430)" to="(780,430)"/>
-    <wire from="(650,640)" to="(650,650)"/>
     <wire from="(710,480)" to="(1020,480)"/>
     <wire from="(530,600)" to="(530,610)"/>
     <wire from="(560,550)" to="(560,560)"/>
     <wire from="(970,140)" to="(1090,140)"/>
-    <wire from="(640,910)" to="(830,910)"/>
     <wire from="(500,490)" to="(550,490)"/>
     <wire from="(540,530)" to="(540,560)"/>
     <wire from="(480,340)" to="(480,420)"/>
@@ -173,7 +169,7 @@
     <wire from="(590,440)" to="(590,450)"/>
     <wire from="(790,160)" to="(790,170)"/>
     <wire from="(480,570)" to="(480,580)"/>
-    <wire from="(830,920)" to="(930,920)"/>
+    <wire from="(610,630)" to="(650,630)"/>
     <wire from="(1000,80)" to="(1000,170)"/>
     <wire from="(850,220)" to="(850,240)"/>
     <wire from="(470,480)" to="(470,510)"/>
@@ -185,7 +181,6 @@
     <wire from="(700,420)" to="(720,420)"/>
     <wire from="(950,80)" to="(950,120)"/>
     <wire from="(780,550)" to="(930,550)"/>
-    <wire from="(950,890)" to="(1040,890)"/>
     <wire from="(930,550)" to="(1020,550)"/>
     <wire from="(560,550)" to="(780,550)"/>
     <wire from="(540,530)" to="(760,530)"/>
@@ -203,7 +198,6 @@
     <wire from="(450,10)" to="(450,140)"/>
     <wire from="(530,10)" to="(530,150)"/>
     <wire from="(690,510)" to="(740,510)"/>
-    <wire from="(930,910)" to="(930,920)"/>
     <wire from="(610,10)" to="(610,150)"/>
     <wire from="(940,20)" to="(1060,20)"/>
     <wire from="(860,440)" to="(860,450)"/>
@@ -215,6 +209,7 @@
     <wire from="(980,150)" to="(1090,150)"/>
     <wire from="(890,340)" to="(890,420)"/>
     <wire from="(990,160)" to="(1100,160)"/>
+    <wire from="(650,630)" to="(650,650)"/>
     <wire from="(720,490)" to="(1020,490)"/>
     <wire from="(890,420)" to="(910,420)"/>
     <wire from="(780,550)" to="(780,660)"/>
@@ -231,8 +226,6 @@
     <wire from="(570,430)" to="(580,430)"/>
     <wire from="(750,700)" to="(750,710)"/>
     <wire from="(730,440)" to="(730,450)"/>
-    <wire from="(820,930)" to="(870,930)"/>
-    <wire from="(870,900)" to="(920,900)"/>
     <wire from="(410,110)" to="(410,430)"/>
     <wire from="(840,230)" to="(840,240)"/>
     <wire from="(750,520)" to="(750,660)"/>
@@ -241,7 +234,6 @@
     <wire from="(730,150)" to="(980,150)"/>
     <wire from="(690,710)" to="(750,710)"/>
     <wire from="(480,650)" to="(650,650)"/>
-    <wire from="(870,900)" to="(870,930)"/>
     <wire from="(490,120)" to="(490,140)"/>
     <wire from="(1290,600)" to="(1290,610)"/>
     <wire from="(950,180)" to="(950,200)"/>
@@ -260,59 +252,12 @@
     <wire from="(710,480)" to="(710,660)"/>
     <wire from="(360,420)" to="(430,420)"/>
     <wire from="(630,220)" to="(640,220)"/>
-    <comp lib="0" loc="(420,560)" name="Splitter">
-      <a name="incoming" val="4"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="none"/>
-    </comp>
-    <comp lib="1" loc="(930,250)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1290,600)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ReadData1"/>
-    </comp>
-    <comp lib="4" loc="(680,420)" name="Register">
-      <a name="label" val="$t2"/>
-    </comp>
-    <comp lib="4" loc="(750,420)" name="Register">
-      <a name="label" val="$t3"/>
+    <comp lib="4" loc="(540,420)" name="Register">
+      <a name="label" val="$t0"/>
     </comp>
     <comp lib="0" loc="(350,10)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="WriteEnable"/>
-    </comp>
-    <comp lib="1" loc="(850,220)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(750,700)" name="Multiplexer">
-      <a name="facing" val="south"/>
-      <a name="select" val="3"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="2" loc="(530,600)" name="Multiplexer">
-      <a name="facing" val="south"/>
-      <a name="select" val="3"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1300,660)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ReadData2"/>
-    </comp>
-    <comp lib="0" loc="(830,890)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(380,560)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ReadRegister1"/>
-      <a name="labelloc" val="south"/>
     </comp>
     <comp lib="0" loc="(460,700)" name="Splitter">
       <a name="incoming" val="4"/>
@@ -320,7 +265,42 @@
       <a name="bit2" val="0"/>
       <a name="bit3" val="none"/>
     </comp>
+    <comp lib="4" loc="(680,420)" name="Register">
+      <a name="label" val="$t2"/>
+    </comp>
     <comp lib="1" loc="(770,220)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="2" loc="(530,600)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="select" val="3"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(750,420)" name="Register">
+      <a name="label" val="$t3"/>
+    </comp>
+    <comp lib="4" loc="(460,420)" name="Register">
+      <a name="label" val="$zero"/>
+    </comp>
+    <comp lib="4" loc="(940,420)" name="Register">
+      <a name="label" val="$sp"/>
+    </comp>
+    <comp lib="0" loc="(300,450)" name="Clock">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="2" loc="(750,700)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="select" val="3"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(420,560)" name="Splitter">
+      <a name="incoming" val="4"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="none"/>
+    </comp>
+    <comp lib="1" loc="(550,200)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
@@ -330,45 +310,56 @@
       <a name="bit2" val="0"/>
       <a name="bit3" val="none"/>
     </comp>
-    <comp lib="4" loc="(880,420)" name="Register">
-      <a name="label" val="$t5"/>
-    </comp>
-    <comp lib="4" loc="(610,420)" name="Register">
-      <a name="label" val="$t1"/>
-    </comp>
-    <comp lib="0" loc="(820,930)" name="Pin">
+    <comp lib="0" loc="(610,630)" name="Pin">
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(1040,890)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="Enable"/>
     </comp>
     <comp lib="0" loc="(330,340)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="WriteData"/>
     </comp>
-    <comp lib="4" loc="(540,420)" name="Register">
-      <a name="label" val="$t0"/>
+    <comp lib="4" loc="(880,420)" name="Register">
+      <a name="label" val="$t5"/>
+    </comp>
+    <comp lib="1" loc="(850,220)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(610,420)" name="Register">
+      <a name="label" val="$t1"/>
+    </comp>
+    <comp lib="1" loc="(710,210)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(930,250)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1300,660)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ReadData2"/>
     </comp>
     <comp lib="1" loc="(470,190)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(380,670)" name="Pin">
+    <comp lib="0" loc="(380,560)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ReadRegister2"/>
+      <a name="label" val="ReadRegister1"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="4" loc="(940,420)" name="Register">
-      <a name="label" val="$sp"/>
-    </comp>
-    <comp lib="4" loc="(950,890)" name="Register"/>
-    <comp lib="0" loc="(650,640)" name="Pin">
+    <comp lib="0" loc="(1290,600)" name="Pin">
+      <a name="width" val="8"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="ReadData1"/>
+    </comp>
+    <comp lib="1" loc="(630,200)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="2" loc="(940,60)" name="Decoder">
       <a name="facing" val="south"/>
@@ -377,28 +368,17 @@
     <comp lib="4" loc="(820,420)" name="Register">
       <a name="label" val="$t4"/>
     </comp>
-    <comp lib="0" loc="(640,910)" name="Clock"/>
-    <comp lib="0" loc="(300,450)" name="Clock"/>
-    <comp lib="1" loc="(710,210)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(360,80)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="WriteRegister"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="4" loc="(460,420)" name="Register">
-      <a name="label" val="$zero"/>
-    </comp>
-    <comp lib="1" loc="(550,200)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(630,200)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
+    <comp lib="0" loc="(380,670)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ReadRegister2"/>
+      <a name="labelloc" val="south"/>
     </comp>
   </circuit>
 </project>
