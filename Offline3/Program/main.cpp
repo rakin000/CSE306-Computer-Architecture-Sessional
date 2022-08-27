@@ -21,7 +21,7 @@ int main(void)
 	//data[3] = 0b0000000011111111;
 	//data[4] = 0b0000111100001111;
 	
-	unsigned char location,write_data,mem_to_reg,memread,memwrite,read_data,memory_data=0,in;
+	unsigned char in,location,write_data,mem_to_reg,memread,memwrite,read_data,memory_data=0;
 	while (1)
 	{
 		in = PINB;

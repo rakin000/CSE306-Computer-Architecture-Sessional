@@ -10,22 +10,22 @@
  
 int main(void)
 {
-        DDRB = 0xFF;
-        DDRD = 0xFF;
-        DDRA = 0x00;
-        DDRC = 0x00;
+        DDRB = 0x00;
+        DDRD = 0x00;
+        DDRA = 0xFF;
+        DDRC = 0xFF;
        
     while (1)
     {
                 unsigned char op1 = (PINB >> 4);
                 unsigned char op2 = (PINB & 0x0F);
                 unsigned char immediate = (PIND >> 4);
-                unsigned char alusrc = (PIND >> 3) & 1;
+                unsigned char alusrc = (PIND >> 3) & 0x01;	
                 unsigned char aluop = (PIND & 0x07);
                
-                unsigned char result;
+                unsigned char result=0;
                
-                if (alusrc) {
+                if (!alusrc) {
                         if (aluop == 0)
                                 result = op1 + op2;
                         else if (aluop == 1)
@@ -59,8 +59,9 @@ int main(void)
                 }
                
                 PORTA = ((result)<<4);
+				PORTA &= (0x01 << 3) ;
                 if ((result & 0x0F) == 0) {
-                        PORTA |= (1 << 3);
+                        PORTA |= (0x01 << 3);
                 }
     }
 }
